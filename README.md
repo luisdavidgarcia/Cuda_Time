@@ -34,3 +34,8 @@ like these:
 - `nvidia-smi` or `watch -n 0.1 nvidia-smi`
 
 If you prefer a GUI though you can use `nsys` and `ncu` 
+
+## Cuda API
+
+To learn more about Cuda and how to utilize it's prebuilt kernels use the 
+CUDA API and read the docs: [CUDA API Docs](https://docs.nvidia.com/cuda/)
