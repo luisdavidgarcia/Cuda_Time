@@ -14,3 +14,6 @@ nvidia-smi
 ```
 
 If both of these commands work then you are doing good.
+
+NOTE: It is critical to learn C/C++ because this is the software that you 
+will be writing your CUDA code in.
