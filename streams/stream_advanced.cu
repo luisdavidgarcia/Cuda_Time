@@ -77,6 +77,9 @@ int main(void) {
     kernel2<<<(N + 255) / 256, 256, 0, stream2>>>(d_data, N);
     
     // Add callback to stream2
+    CHECK_CUDA_ERROR(cudaStreamAddCallback(stream2, myStreamCallback, NULL, 0));
+    
+    // Asynchronous memory copy back to host
     CHECK_CUDA_ERROR(cudaMemcpyAsync(h_data, d_data, size, cudaMemcpyDeviceToHost, stream2));
 
     // Synchronize streams
