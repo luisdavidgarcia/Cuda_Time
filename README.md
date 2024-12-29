@@ -52,4 +52,5 @@ There are two other varations of cuBLAS:
 - Xt: Combines CPU and GPU for larger matrices, but much slower performance
 
 To compile the code you often must use this flag with the `nvcc` compiler:
-- `-lcublas`
+- If using plain cuBlas or Xt library: `-lcublas`
+- If using the Lt version: `-lcublas -lcublasLt`
