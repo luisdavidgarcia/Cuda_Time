@@ -39,3 +39,17 @@ If you prefer a GUI though you can use `nsys` and `ncu`
 
 To learn more about Cuda and how to utilize it's prebuilt kernels use the 
 CUDA API and read the docs: [CUDA API Docs](https://docs.nvidia.com/cuda/)
+
+### cuBLAS
+ 
+ Nivida CUDA Basic Linear Algebra Subprograms is a solid GPU-accelerated library
+ for accelerating AI and HPT, but be aware of how you shape you matrix with it
+ [link](https://stackoverflow.com/questions/56043539/cublassgemm-row-major-multiplication)
+
+There are two other varations of cuBLAS:
+
+- Lt: The lightweight version so expect some accuracy loss
+- Xt: Combines CPU and GPU for larger matrices, but much slower performance
+
+To compile the code you often must use this flag with the `nvcc` compiler:
+- `-lcublas`
